@@ -1,0 +1,14 @@
+{
+  "name": "deep-research-pipeline",
+  "private": true,
+  "type": "module",
+  "description": "Scripts for the deep-research-pipeline skill. No dependencies by design — bun's standard library only, so the skill works on a fresh machine.",
+  "scripts": {
+    "test": "bun test scripts/",
+    "contract:print": "bun scripts/ledger.ts contract --md",
+    "contract:check": "bun scripts/ledger.ts contract --check references/ledger.md",
+    "doctor": "bun scripts/scholar.ts doctor",
+    "doctor:strict": "bun scripts/scholar.ts doctor --strict",
+    "verify": "bun scripts/ledger.ts contract --check references/ledger.md && bun test scripts/"
+  }
+}
